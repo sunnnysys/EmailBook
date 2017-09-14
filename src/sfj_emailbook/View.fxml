@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="anchor" fx:id="anchor" prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sfj_emailbook.ViewController">
+    <children>
+        <Label fx:id="label" alignment="CENTER" layoutX="244.0" layoutY="12.0" minHeight="16" minWidth="69" text="EmailBook">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+      <SplitPane id="mainSplit" fx:id="mainSplit" dividerPositions="0.24561403508771928" layoutY="53.0" prefHeight="600.0" prefWidth="800.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="172.0">
+               <children>
+                  <StackPane fx:id="menuPane" layoutX="-1.0" prefHeight="598.0" prefWidth="200.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="650.0">
+               <children>
+                  <Pane id="exportPane" fx:id="exportPane" layoutX="38.0" prefHeight="581.0" prefWidth="650.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button fx:id="exportButton" layoutX="133.0" layoutY="288.0" mnemonicParsing="false" onAction="#generatePdf" prefHeight="22.0" prefWidth="185.0" text="Button" />
+                        <TextField fx:id="inputExport" layoutX="130.0" layoutY="187.0" prefHeight="22.0" prefWidth="185.0" promptText="filename" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="131.0" layoutY="67.0" text="Save to PDF" textAlignment="CENTER">
+                           <font>
+                              <Font size="34.0" />
+                           </font>
+                        </Label>
+                     </children></Pane>
+                  <Pane id="contactPane" fx:id="contactPane" layoutX="48.0" layoutY="10.0" prefHeight="598.0" prefWidth="650.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-205.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TableView id="table" fx:id="table" editable="true" prefHeight="409.0" prefWidth="580.0">
+                          <!-- <placeholder>
+                             <Label text = "No connection added yet">
+                             </Label>      
+                          </placeholder> -->
+                          <columns>
+                          </columns>
+                        </TableView>
+                        <TextField id="inputFirstname" fx:id="inputFirstname" layoutX="145.0" layoutY="440.0" promptText="Kovács" />
+                        <TextField id="inputLastname" fx:id="inputLastname" layoutX="145.0" layoutY="480.0" promptText="Gyula" />
+                        <TextField id="inputEmail" fx:id="inputEmail" layoutX="145.0" layoutY="520.0" promptText="kgyula@gmail.com" />
+                        <TextField id="inputD2" fx:id="inputD2" layoutX="145.0" layoutY="552.0" promptText="100" />
+                        <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="444.0" prefHeight="14.0" prefWidth="100.0" text="Firstname:" />
+                        <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="484.0" prefHeight="14.0" prefWidth="100.0" text="Lastname:" />
+                        <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="524.0" prefHeight="14.0" prefWidth="100.0" text="Email address:" />
+                        <Button id="addNewContactButton" fx:id="addNewContactButton" layoutX="314.0" layoutY="480.0" mnemonicParsing="false" onAction="#addContact" text="Add new contact" />
+                     </children></Pane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+    </children>
+</AnchorPane>
